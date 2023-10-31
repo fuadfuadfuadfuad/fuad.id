@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #93B1A6;
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  background-color: #183D3D;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;  
+  padding: 20px;
+}
+
+nav a:hover {  
+  background-color: #5C8374;
+  padding: 20px;  
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+aside {
+  flex: 1;
+}
+
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: #183D3D;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: #5C8374;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+.jumbotron {
+  font-size: 40px;
+  padding: 60px;
+  background-color: #040D12;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {  
+  max-height: 300px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.featured-image:hover {
+  filter: grayscale(0%);
+}
+
+.profile img {
+  width: 200px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  position: relative;
+  z-index: 0;
+}
+
+.profile img:hover {
+  filter: grayscale(0%);
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+}
+
+.card h2, .card h3 {
+  text-align: center;
+}
+
+.tombol {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: solid;
+  border-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.tombol:hover {
+  transform: scale(1.1);
+}
+
+.tabel-profil {
+  margin: 0 auto;
+}
+
+#tech, #kontak {
+  padding-top: 55px;    
+}
+
+#tombol-ke-atas {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+
+#tombol-ke-atas:hover {
+  transform: translate(0, -20px);
+}
+
+.hai {
+  display: inline-block;
+  font-size: 60px;
+}
+
+.hai:hover {
+  animation: lambai 1s ease;
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+#tombol-jumbotron {
+  text-decoration: none;
+}
+
+#tombol-jumbotron-text {
+  text-decoration: none;
+  display: none;
+}
+
+@keyframes lambai {
+  0% {
+      transform: translateX(0%) rotate(0deg);
+  }
+  25% {
+      transform: translateX(20%) rotate(45deg);
+  }
+  50% {
+      transform: rotate(0deg);
+  }  
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
