@@ -60,3 +60,15 @@ tombolJumbotron.addEventListener("mouseover", function () {
 tombolJumbotron.addEventListener("mouseout", function () {
   tombolJumbotronText.style.display = "none";
 });
+
+var i = 0;
+var txt = `I'm Fuad, a Web Developer 👨‍💻`;
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("helo-text").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}

@@ -183,11 +183,39 @@ h3 {
 
 #tombol-jumbotron {
   text-decoration: none;
+  position: relative;
+  animation: naikTurun 2s infinite;;  
 }
 
 #tombol-jumbotron-text {
   text-decoration: none;
-  display: none;
+  display: none;  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 64px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;    
+}
+
+.card-image:hover {
+  filter: grayscale(0%);
 }
 
 @keyframes lambai {
@@ -200,6 +228,18 @@ h3 {
   50% {
       transform: rotate(0deg);
   }  
+}
+
+@keyframes naikTurun {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 25px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
